@@ -2,7 +2,7 @@
     <div>
         <b-input-group class="mt-3">
 
-            <b-form-input class="in"></b-form-input>
+            <b-form-input placeholder="Enter your name" class="in"></b-form-input>
 
             <b-input-group-append>
                 <b-button class="submit" pill variant="light">Get Started</b-button>
