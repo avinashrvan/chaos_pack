@@ -2,11 +2,13 @@
   <div id="app">
     <Header title='Welcome to PBBT'/>
     
-    <div class="container">
+    <div>
       <GetStarted />
     </div>
 
-    <div class="container">Budget tracking</div>
+    <div class="container">
+      <BudgetTracking/>
+    </div>
 
     <div class="container">pricing</div>
 
@@ -17,6 +19,7 @@
 <script>
 import GetStarted from './components/GetStarted.vue'
 import Header from './components/Header.vue'
+import BudgetTracking from './components/BudgetTracking.vue'
 
 
 export default {
@@ -24,7 +27,7 @@ export default {
   components:{
     Header,
     GetStarted,
-
+    BudgetTracking
   }  
 }
 </script>
