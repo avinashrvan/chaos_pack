@@ -1,4 +1,4 @@
-# chaos_pack
+# chaos_code
 
 ## Project setup
 ```
