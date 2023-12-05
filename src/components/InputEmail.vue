@@ -1,11 +1,13 @@
 <template>
     <div>
         <b-input-group class="mt-3">
-    <b-form-input class="in"></b-form-input>
-    <b-input-group-append>
-      <b-button class="submit" pill variant="light">Get Started</b-button>
-    </b-input-group-append>
-  </b-input-group>
+
+            <b-form-input class="in"></b-form-input>
+
+            <b-input-group-append>
+                <b-button class="submit" pill variant="light">Get Started</b-button>
+            </b-input-group-append>
+        </b-input-group>
     </div>
 </template>
 
