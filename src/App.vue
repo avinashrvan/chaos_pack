@@ -55,7 +55,7 @@ body {
   visibility: hidden;
 }
 
-.container {
+/* .container {
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
@@ -63,7 +63,7 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
-}
+} */
 
 .btn {
   display: inline-block;

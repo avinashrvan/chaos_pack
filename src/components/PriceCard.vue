@@ -31,7 +31,18 @@
 
             <div class="hidden">y</div>
             <div class="hidden">y</div>
-            <div>GET STARTED</div>
+
+            <!-- <a 
+                href="#GetStarted" 
+                class="btn submit" 
+            >GET STARTED</a> -->
+
+            <b-button 
+                pill 
+                type="" 
+                variant="light" 
+                class="submit"
+            >GET STARTED</b-button>
 
         </div>
         
@@ -67,16 +78,22 @@
             <div class="hidden">y</div>
             <div class="hidden">y</div>
             <div class="hidden">y</div>
-            <div class="hidden">y</div>
 
-            <div>GET STARTED</div>
+
+            <b-button 
+                pill 
+                type="" 
+                variant="dark" 
+                class="submit"
+            >GET STARTED</b-button>
 
         </div>
 
 
 
 
-
+        <div class="hidden">y</div>
+        <div class="hidden">y</div>
 
     </div>
 </template>
@@ -118,6 +135,7 @@ export default {
     text-align: left;
     padding: 40px;
     justify-content: center;
+    border: 2px solid rgb(204, 204, 204);
     border-radius: 20px;
 }
 
@@ -132,6 +150,14 @@ export default {
     border-color: darkblue;
     -webkit-text-fill-color: rgb(231, 231, 231);
 }
+
+.submit{
+        background-color: darkorange;
+        -webkit-text-fill-color: white;
+        width:100%;
+        border-radius: 50px;
+}
+
 </style>
 
 

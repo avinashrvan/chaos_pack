@@ -7,7 +7,7 @@
                     <h3 style="color:#00008B; font-family: Helvetica"><strong>Personal Budget Tracking Tool</strong></h3>
                     <h6><em>One Stop Budget Tracking Solution</em></h6>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam id est laborum.</p>
-                    <InputEmail/>
+                    <InputEmail id="GetStarted"/>
 
                 </b-col>
 
