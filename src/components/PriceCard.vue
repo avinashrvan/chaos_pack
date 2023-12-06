@@ -127,7 +127,10 @@ export default {
 .poster{
     align-content: left;
     text-align: left;
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     justify-content: center;
     border: 2px solid rgb(204, 204, 204);
     border-radius: 20px;

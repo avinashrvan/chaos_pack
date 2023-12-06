@@ -10,8 +10,12 @@
       <BudgetTracking/>
     </div>
 
-    <div class="container">
+    <div>
       <Pricing/>
+    </div>
+
+    <div>
+      <Footer/>
     </div>
 
   </div>
@@ -23,6 +27,7 @@ import GetStarted from './components/GetStarted.vue'
 import Header from './components/Header.vue'
 import BudgetTracking from './components/BudgetTracking.vue'
 import Pricing from './components/Pricing.vue'
+import Footer from './components/Footer.vue'
 
 
 export default {
@@ -31,7 +36,8 @@ export default {
     Header,
     GetStarted,
     BudgetTracking,
-    Pricing
+    Pricing,
+    Footer
   }  
 }
 </script>
