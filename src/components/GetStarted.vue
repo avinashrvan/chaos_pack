@@ -12,7 +12,7 @@
                 </b-col>
 
                 <b-col class='col'>
-                    <img src="../assets/getStarted.png" class="img-responsive" width="100%">                
+                    <img src="../assets/getStarted.png" class="img-responsive float-end" width="100%">                
                 </b-col>
             </b-row>
         </b-container>

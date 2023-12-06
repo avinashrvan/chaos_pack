@@ -1,13 +1,13 @@
 <template>
     <div>
-        <b-form inline @submit="onSubmit">
-            
+        <b-form class="inline" @submit="onSubmit">
+                
                 <b-form-input
                     id="input-1"
                     v-model="email"
                     type="email"
                     placeholder="Enter your email"
-                    class="in"
+                    class="in shadow"
                     required
                 ></b-form-input>
         
@@ -30,7 +30,7 @@ export default {
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        alert("Thank you for registering your email!: \n".concat(this.email))
+        alert("\nThank you for registering your email!: \n".concat(this.email))
       },
      
     }
@@ -40,13 +40,18 @@ export default {
 
 <style scoped>
     .in{
-        border-radius: 20px;
+        border-radius: 100px;
         border-color: black;
     }
 
     .submit{
         background-color: darkorange;
         -webkit-text-fill-color: white;
-        min-width: 150px;
+        min-width: 200px;
+    }
+
+    .inline{
+        display:flex;
+        width: auto;
     }
 </style>

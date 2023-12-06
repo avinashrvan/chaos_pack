@@ -12,7 +12,7 @@
                 </b-col>
                     
                 <b-col class='col'>
-                    <h6>SIGN UP || LOGIN</h6>
+                    <h6>LOGIN || SIGNUP</h6>
                 </b-col>
             </b-row>
         </b-container>
