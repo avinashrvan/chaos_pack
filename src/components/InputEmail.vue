@@ -1,13 +1,24 @@
 <template>
     <div>
-        <b-input-group class="mt-3">
-
-            <b-form-input placeholder="Enter your name" class="in"></b-form-input>
-
-            <b-input-group-append>
-                <b-button class="submit" pill variant="light">Get Started</b-button>
-            </b-input-group-append>
-        </b-input-group>
+        <b-form inline @submit="onSubmit">
+            
+                <b-form-input
+                    id="input-1"
+                    v-model="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    class="in"
+                    required
+                ></b-form-input>
+        
+                <b-button 
+                    pill 
+                    type="" 
+                    variant="light" 
+                    class="submit"
+                >GET STARTED</b-button>
+        
+        </b-form>
     </div>
 </template>
 
@@ -15,16 +26,15 @@
 <script>
 export default {
     name: "InputEmail",
-    props: {
-        placeholder: String,
-        submitWord: String,
-    },
 
-    data(){
-        return{
-            text: ''
-        }
+    methods: {
+      onSubmit(event) {
+        event.preventDefault()
+        alert("Thank you for registering your email!: \n".concat(this.email))
+      },
+     
     }
+  
 }
 </script>
 
@@ -37,6 +47,6 @@ export default {
     .submit{
         background-color: darkorange;
         -webkit-text-fill-color: white;
-        width: 150px;
+        min-width: 150px;
     }
 </style>
