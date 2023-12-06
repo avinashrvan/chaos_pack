@@ -6,7 +6,7 @@
       <GetStarted />
     </div>
 
-    <div class="container">
+    <div>
       <BudgetTracking/>
     </div>
 
@@ -45,7 +45,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.container {
+
+
+.hidden{
+  visibility: hidden;
+}
+
+/* .container {
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
@@ -53,7 +59,7 @@ body {
   border: 1px solid steelblue;
   padding: 30px;
   border-radius: 5px;
-}
+} */
 
 .btn {
   display: inline-block;
