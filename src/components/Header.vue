@@ -49,8 +49,8 @@ export default {
 
     img{
         /* display: flex; */
-        width: 40px;
-        height: 40px;
+        max-width: 60px;
+        max-height: 60px;
 
     }
 

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header title='Welcome to PBBT'/>
+    <Header title='Welcome to PBTT'/>
     
     <div>
       <GetStarted />
