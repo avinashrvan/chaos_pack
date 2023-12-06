@@ -2,7 +2,7 @@
     <div>
 
         <b-container class="b-container">
-            <b-row>
+            <b-row align-v="center">
                 <b-col class='col'>
                     <h3 style="color:#00008B; font-family: Helvetica"><strong>Personal Budget Tracking Tool</strong></h3>
                     <h6><em>One Stop Budget Tracking Solution</em></h6>
@@ -16,9 +16,7 @@
                 </b-col>
             </b-row>
         </b-container>
-
-
-
+        <h3 class="hidden">space</h3> 
     </div>
 </template>
 
