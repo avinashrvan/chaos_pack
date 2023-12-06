@@ -1,10 +1,22 @@
 <template>
     <header>
-        <h6>{{ title }}</h6>
 
-        <img src="../assets/logo.png" alt="">
+        <b-container class="header" >
+            <b-row>
+                <b-col class='col'>
+                    <h6>{{ title }}</h6>
+                </b-col>
 
-        <h6>SIGN UP || LOGIN</h6>
+                <b-col class='col'>
+                    <img src="../assets/logo.png" alt="">
+                </b-col>
+                    
+                <b-col class='col'>
+                    <h6>SIGN UP || LOGIN</h6>
+                </b-col>
+            </b-row>
+        </b-container>
+
 
     </header>
 </template>
@@ -26,7 +38,7 @@ export default {
 
 <style scoped>
     header{
-        display: flex;
+        /* display: flex; */
         justify-content: space-between;
         align-items: center;
         margin-left: 30px;
@@ -36,10 +48,14 @@ export default {
     }
 
     img{
-        display: flex;
+        /* display: flex; */
         width: 40px;
         height: 40px;
 
+    }
+
+    .header{
+        align-content: center;
     }
 
 </style>
