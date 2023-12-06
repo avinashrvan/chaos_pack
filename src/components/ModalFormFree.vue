@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-button class="open" v-b-modal.modal-prevent-closing @click="setSelected(initial)">GET STARTED</b-button>
+    <b-button class="open" v-b-modal.modal-prevent-closing-free @click="setSelected(initial)">GET STARTED</b-button>
 
     <b-modal
-      id="modal-prevent-closing"
+      id="modal-prevent-closing-free"
       ref="modal"
       title="Submit Your Details"
       
@@ -77,7 +77,7 @@
         nameState: null,
         email: '',
         emailState: null,
-        selected: null,
+        selected: "Free",
         options: [
           { value: 'Free', text: 'Free - For Students' },
           { value: 'Pro', text: 'Pro - For Professionals' },

@@ -50,7 +50,7 @@
             </b-row>
         </b-container>
 
-
+        
 
     </div>
 </template>
@@ -58,7 +58,6 @@
 
 <script>
 import PriceCard from './PriceCard.vue'
-const wow = document.querySelector("premiumCard")
 
 export default {
     name: "Pricing",

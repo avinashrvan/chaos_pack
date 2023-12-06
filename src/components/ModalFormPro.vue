@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-button class="open" v-b-modal.modal-prevent-closing @click="setSelected(initial)">GET STARTED</b-button>
+    <b-button class="open" v-b-modal.modal-prevent-closing-pro @click="setSelected(initial)">GET STARTED</b-button>
 
     <b-modal
-      id="modal-prevent-closing"
+      id="modal-prevent-closing-pro"
       ref="modal"
       title="Submit Your Details"
       

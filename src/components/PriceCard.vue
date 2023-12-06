@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="main">
 
         <!-- CODE FOR FREE AND PRO CARDS -->
         <div class="poster shadow" v-if="title !== 'Premium'">
@@ -18,31 +18,22 @@
                 <li class="list-group-item d-flex ">
                     <b-badge pill variant="danger" class="badge">ii</b-badge>
                     <div class="hidden">ss</div>
-                    {{ sp1 }}</li>
+                    <strong>{{ sp1 }}</strong></li>
                 <li class="list-group-item d-flex ">
                     <b-badge pill variant="danger" class="badge">ii</b-badge>
                     <div class="hidden">ss</div>
-                    {{ sp2 }}</li>
+                    <strong>{{ sp2 }}</strong></li>
                 <li class="list-group-item d-flex ">
                     <b-badge pill variant="danger" class="badge">ii</b-badge>
                     <div class="hidden">ss</div>
-                    {{ sp3 }}</li>
+                    <strong>{{ sp3 }}</strong></li>
             </ul>
 
             <div class="hidden">y</div>
             <div class="hidden">y</div>
 
-            <!-- <a 
-                href="#GetStarted" 
-                class="btn submit" 
-            >GET STARTED</a> -->
-
-            <b-button 
-                pill 
-                type="" 
-                variant="light" 
-                class="submit"
-            >GET STARTED</b-button>
+            <ModalFormFree v-if="title === 'Free'" initial="Free"></ModalFormFree>
+            <ModalFormPro v-if="title === 'Pro'" initial="Pro"></ModalFormPro>
 
         </div>
         
@@ -64,34 +55,28 @@
                 <li class="list-group-item d-flex blue">
                     <b-badge pill variant="danger" class="blueBadge">ii</b-badge>
                     <div class="hidden">ss</div>
-                    {{ sp1 }}</li>
+                    <strong>{{ sp1 }}</strong></li>
                 <li class="list-group-item d-flex blue">
                     <b-badge pill variant="danger" class="blueBadge">ii</b-badge>
                     <div class="hidden">ss</div>
-                    {{ sp2 }}</li>
+                    <strong>{{ sp2 }}</strong></li>
                 <li class="list-group-item d-flex blue">
                     <b-badge pill variant="danger" class="blueBadge">ii</b-badge>
                     <div class="hidden">ss</div>
-                    {{ sp3 }}</li>
+                    <strong>{{ sp3 }}</strong></li>
             </ul>
 
             <div class="hidden">y</div>
             <div class="hidden">y</div>
             <div class="hidden">y</div>
 
-
-            <b-button 
-                pill 
-                type="" 
-                variant="dark" 
-                class="submit"
-            >GET STARTED</b-button>
+            <ModalForm initial="Premium"/>
 
         </div>
 
 
 
-
+        
         <div class="hidden">y</div>
         <div class="hidden">y</div>
 
@@ -101,9 +86,17 @@
 
 
 <script>
+import ModalForm from './ModalForm.vue'
+import ModalFormFree from './ModalFormFree.vue' 
+import ModalFormPro from './ModalFormPro.vue'
+
 export default {
     name: "PriceCard",
-    components:{},
+    components:{
+        ModalForm,
+        ModalFormFree,
+        ModalFormPro
+    },
     props:{
         title: String,
         forWho: String,
@@ -113,7 +106,7 @@ export default {
         sp2: String,
         sp3: String
 
-    },
+    }
 }
 </script>
 
@@ -128,6 +121,7 @@ export default {
     background-color: darkblue;
     -webkit-text-fill-color: darkblue;
     border-radius: 13px;
+    max-height: 22px;
 }
 
 .poster{
@@ -146,8 +140,8 @@ export default {
 }
 
 .blue{
-    background-color: darkblue;
-    border-color: darkblue;
+    background-color: #2b478b;
+    border-color: #2b478b;
     -webkit-text-fill-color: rgb(231, 231, 231);
 }
 
