@@ -49,8 +49,7 @@
 
         <b-form-group
           label="Package"
-          label-for="package-select"
-          :state="True"
+          :state="true"
         >
           <b-form-select 
             v-model="selected" 

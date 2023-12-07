@@ -14,9 +14,7 @@
       <Pricing/>
     </div>
 
-    <div>
-      <Footer/>
-    </div>
+    <Footer/>
 
   </div>
 </template>

@@ -26,6 +26,11 @@
 <script>
 export default {
     name: "InputEmail",
+    data(){
+        return{
+            email: '',
+        }
+    },
 
     methods: {
       onSubmit(event) {
