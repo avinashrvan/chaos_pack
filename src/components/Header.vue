@@ -2,14 +2,18 @@
     <header>
 
         <b-container class="header" >
-            <b-row>
+            <b-row align-v="center" >
                 <b-col>
                     <h6>{{ title }}</h6>
                 </b-col>
 
+                <b-col></b-col>
+
                 <b-col>
                     <img src="../assets/logo.png" alt="">
                 </b-col>
+                
+                <b-col></b-col>
                     
                 <b-col>
                     <b-list-group horizontal>

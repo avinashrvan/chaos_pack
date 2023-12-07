@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        Signup
+        <b-button class="b-button" pill>Signup</b-button>
     </div>
 </template>
 
@@ -17,5 +17,8 @@ export default {
 
 
 <style scoped>
-
+.b-button{
+    background-color: darkorange;
+    -webkit-text-fill-color: white;
+}
 </style>
