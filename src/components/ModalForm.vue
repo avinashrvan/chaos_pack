@@ -122,9 +122,7 @@
             }
 
             // Hide the modal manually
-            this.$nextTick(() => {
             this.$bvModal.hide('modal-prevent-closing')
-            })
 
             // Give a confirmation message to the user
             this.makeToast()
