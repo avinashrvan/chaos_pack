@@ -40,32 +40,28 @@
                 valid-feedback="Nice password"
                 :state="passwordState"
             >
+
+            <b-input-group>
             <b-form-input 
                 @keyup="checkFormValidity()"
-                type="password" 
+                :type="showPassword ? 'text' : 'password'" 
                 class="form-control" 
                 id="passwordEntry" 
                 placeholder="Password"
                 :state="passwordState"
                 v-model="password"></b-form-input>
 
+                <b-input-group-append>
+                    <img v-if="!showPassword" src="../assets/showPassword.png" @click="viewPassword()" width=60%>
+                    <img v-if="showPassword" src="../assets/hidePassword.png" @click="viewPassword()" width=70%>
+
+                </b-input-group-append>
+            </b-input-group>
             </b-form-group>
 
-            <b-form-group>
-                <b-form-checkbox
-                id="checkbox"
-                v-model="viewPassword"
-                name="checkbox"
-                value="accepted"
-                @click="viewPassword()"
-                >
-                View password
-                </b-form-checkbox>
+            
 
-
-
-            </b-form-group>
-
+            
 
 
 
@@ -87,6 +83,7 @@ export default {
         emailState: null,
         password: '',
         passwordState: null,
+        showPassword: false
       }
     },
     props: {
@@ -131,7 +128,7 @@ export default {
             
         },
         viewPassword(){
-            return
+            this.showPassword = !this.showPassword
         }
     }
 }
