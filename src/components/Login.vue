@@ -52,10 +52,10 @@
                 v-model="password"></b-form-input>
 
                 <b-input-group-append>
-                    <img v-if="!showPassword" src="../assets/showPassword.png" @click="viewPassword()" width=60%>
-                    <img v-if="showPassword" src="../assets/hidePassword.png" @click="viewPassword()" width=70%>
-
+                    <img class="img" v-if="showPassword" src="../assets/showPassword.png" @click="viewPassword()" width=40%>
+                    <img class="img" v-if="!showPassword" src="../assets/hidePassword.png" @click="viewPassword()" width=50%>
                 </b-input-group-append>
+
             </b-input-group>
             </b-form-group>
 
@@ -104,7 +104,8 @@ export default {
             this.emailState = null
             this.password = ''
             this.passwordState = null
-            this.show = null
+            this.show = null,
+            this.showPassword = false
         },
         handleOk(bvModalEvent) {
             // Prevent modal from closing
@@ -140,5 +141,9 @@ export default {
 .b-button{
     background-color: darkorange;
     -webkit-text-fill-color: white;
+}
+
+.img{
+    margin-left: 20px;
 }
 </style>

@@ -41,7 +41,9 @@ export default {
             autoHideDelay: 5000,
             appendToast: true,
             enableHtml: true,
-            progressBar: true
+            progressBar: true,
+            solid: true,
+            variant: 'success'
             })
         document.getElementById("input-1").value = null
       },

@@ -23,7 +23,7 @@
                 :state="nameState"
             >
             <b-form-input
-                @keypress="checkFormValidity()"
+                @keyup="checkFormValidity()"
                 id="name-input"
                 v-model="name"
                 :state="nameState"
@@ -68,8 +68,8 @@
                 v-model="password"></b-form-input>
 
                 <b-input-group-append class="img">
-                    <img v-if="!showPassword" src="../assets/showPassword.png" @click="viewPassword()" width=60%>
-                    <img v-if="showPassword" src="../assets/hidePassword.png" @click="viewPassword()" width=70%>
+                    <img v-if="showPassword" src="../assets/showPassword.png" @click="viewPassword()" width=60%>
+                    <img v-if="!showPassword" src="../assets/hidePassword.png" @click="viewPassword()" width=70%>
                 </b-input-group-append>
             </b-input-group>
             </b-form-group>

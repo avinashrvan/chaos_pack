@@ -136,7 +136,9 @@
             autoHideDelay: 5000,
             appendToast: append,
             enableHtml: true,
-            progressBar: true
+            progressBar: true,
+            solid: true,
+            variant: 'success'
             })
         }
     }
