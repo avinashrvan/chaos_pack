@@ -125,6 +125,7 @@ export default {
 }
 
 .poster{
+    background-color: white;
     align-content: left;
     text-align: left;
     padding-top: 40px;
@@ -134,6 +135,12 @@ export default {
     justify-content: center;
     border: 2px solid rgb(204, 204, 204);
     border-radius: 20px;
+    transition: 0.5s;
+}
+
+.poster:hover{
+    box-shadow: 8px 8px 8px black;
+    transform: scale(1.2);
 }
 
 .blueBadge{

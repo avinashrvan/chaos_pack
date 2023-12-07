@@ -5,9 +5,10 @@
         <h3 style="color:#00008B; font-family: Helvetica"><strong>Pricing</strong></h3>
         <h6><em>The Best Deals All Day Everyday</em></h6>
         <div class="hidden">y</div>
+        <div class="hidden">y</div>
 
         <b-container class="b-container">
-            <b-row align-v="center">
+            <b-row align-v="start">
                 <b-col class='col'>
                     <div class="container">
                         <PriceCard 

@@ -34,6 +34,7 @@ export default {
         margin-top: 20px;
         font-size: 70%;
         -webkit-text-fill-color: darkblue;
+        transition: 0.3s;
     }
 
     img{
@@ -41,6 +42,12 @@ export default {
         max-width: 60px;
         max-height: 60px;
 
+    }
+
+
+    footer:hover{
+        box-shadow: 8px 8px 8px black;
+        transform: scale(1.2);
     }
 
     .header{
