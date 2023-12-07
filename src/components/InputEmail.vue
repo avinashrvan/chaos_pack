@@ -30,7 +30,15 @@ export default {
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        alert("\nThank you for registering your email!: \n".concat(this.email))
+        this.$bvToast.toast(`We will send an email to you soon: ${this.email}`,
+            {
+            title: 'Thank you for registering!',
+            autoHideDelay: 5000,
+            appendToast: true,
+            enableHtml: true,
+            progressBar: true
+            })
+        document.getElementById("input-1").value = null
       },
      
     }

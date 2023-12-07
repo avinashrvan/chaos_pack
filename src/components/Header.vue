@@ -3,17 +3,25 @@
 
         <b-container class="header" >
             <b-row>
-                <b-col class='col'>
+                <b-col>
                     <h6>{{ title }}</h6>
                 </b-col>
 
-                <b-col class='col'>
+                <b-col>
                     <img src="../assets/logo.png" alt="">
                 </b-col>
                     
-                <b-col class='col'>
-                    <h6>LOGIN || SIGNUP</h6>
+                <b-col>
+                    <b-list-group horizontal>
+                        <b-list-group-item class = "b-list-group-item">
+                            <Login/>
+                        </b-list-group-item>
+                        <b-list-group-item class="b-list-group-item">
+                            <Signup/>
+                        </b-list-group-item>
+                    </b-list-group>
                 </b-col>
+
             </b-row>
         </b-container>
 
@@ -23,7 +31,8 @@
 
 
 <script>
-
+import Login from './Login.vue'
+import Signup from './Signup.vue'
 
 export default {
     name: 'Header',
@@ -31,6 +40,10 @@ export default {
         title: String
 
     },
+    components:{
+        Login,
+        Signup
+    }
 
 }
 </script>
@@ -39,10 +52,10 @@ export default {
 <style scoped>
     header{
         /* display: flex; */
-        justify-content: space-between;
-        align-items: center;
-        margin-left: 30px;
-        margin-right: 30px;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        margin-left: 10px;
+        margin-right: 10px;
         margin-bottom: 20px;
         margin-top: 20px;
     }
@@ -56,6 +69,10 @@ export default {
 
     .header{
         align-content: center;
+    }
+
+    .b-list-group-item{
+        border: none;
     }
 
 </style>

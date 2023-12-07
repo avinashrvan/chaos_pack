@@ -1,8 +1,8 @@
 <template>
     <footer>
-        <h6 class="footer">
+        <a class="footer" href="https://monkeytype.com/" target="_blank" rel="noopener noreferrer">
             <strong> &copy; Chaos Pack Challenge 2021 </strong> 
-        </h6>
+        </a>
         
 
 
@@ -32,7 +32,7 @@ export default {
         margin-right: 30px;
         margin-bottom: 20px;
         margin-top: 20px;
-        font-size: 30%;
+        font-size: 70%;
         -webkit-text-fill-color: darkblue;
     }
 
@@ -45,6 +45,10 @@ export default {
 
     .header{
         align-content: center;
+    }
+
+    a:link, a:visited {
+        color: darkblue;
     }
 
 </style>
