@@ -114,7 +114,7 @@ export default {
     padding-right: 50px;
     justify-content: center;
     border: 2px solid rgb(204, 204, 204);
-    border-radius: 20px;
+    border-radius: 15px;
     transition: 0.5s;
 }
 

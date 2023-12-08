@@ -4,6 +4,9 @@
     <h3 style="color:#00008B; font-family: Helvetica" ><strong>Budget Tracking Made Easy</strong></h3>
 
     <b-container class="b-container" >
+        <div class="hidden">space</div>
+        <div class="hidden">space</div>
+        
             <b-row>
                 <b-col class='col'>
                     <img src="../assets/savings.png" class="img-responsive" width="40%"> 

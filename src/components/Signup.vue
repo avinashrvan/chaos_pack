@@ -1,6 +1,11 @@
 <template>
     <div class="">
-        <b-button class="b-button open" v-b-modal.modal-prevent-closing-signup pill>Signup</b-button>
+        <b-button   
+            class="b-button open" 
+            v-b-modal.modal-prevent-closing-signup pill 
+            v-b-popover.hover.top="'Make one now!'" 
+            title="Don't have an account yet?"
+        >Signup</b-button>
 
 
         <b-modal

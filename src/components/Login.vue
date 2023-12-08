@@ -1,6 +1,10 @@
 <template>
     <div class="">
-        <b-button class="b-button open" v-b-modal.modal-prevent-closing-login pill>Login</b-button>
+        <b-button 
+            class="b-button open" 
+            v-b-modal.modal-prevent-closing-login pill
+            v-b-popover.hover.top="'Login now!'" title="Already have an account?"
+        >Login</b-button>
 
 
         <b-modal
@@ -128,6 +132,9 @@ export default {
             this.$nextTick(() => {
             this.$bvModal.hide('modal-prevent-closing-login')
             })
+
+            // give a successful login message
+
             
         },
         viewPassword(){
