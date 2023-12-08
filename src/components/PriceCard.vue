@@ -2,30 +2,30 @@
     <div id="main">
 
         <!-- CODE FOR ALL CARDS -->
-        <div :class="title==='Premium' ? 'bluePoster poster shadow' : 'poster shadow'">
+        <div :class="blue ? 'bluePoster poster shadow' : 'poster shadow'">
 
             <!-- DECIDE ON THE TEXT STYLE BASED ON THE CARD TYPE -->
-            <h5  :class="title==='Premium' ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
-            <h6 :class="title==='Premium' ? 'bluePosterText': null">For {{ forWho }}</h6>
+            <h5  :class="blue ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
+            <h6 :class="blue ? 'bluePosterText': null">For {{ forWho }}</h6>
 
             <div class="hidden">space</div>
 
-            <h1 :class="title==='Premium' ? 'bluePosterText' : 'whitePosterText'"><strong>{{ price }}</strong></h1>
+            <h1 :class="blue ? 'bluePosterText' : 'whitePosterText'"><strong>{{ price }}</strong></h1>
 
             <div class="hidden">space</div>
 
             <!-- FOR ALL FEATURES, WE LIST IT OUT  -->
             <ul class="list-group list-group-flush">
-                <li :class="title==='Premium' ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
-                    <b-badge pill variant="danger" :class="title==='Premium' ? 'whiteBadge' : 'badge'">ii</b-badge>
+                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
+                    <b-badge pill variant="danger" :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
                     <div class="hidden">ss</div>
                     <strong>{{ sp1 }}</strong></li>
-                <li :class="title==='Premium' ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
-                    <b-badge pill variant="danger" :class="title==='Premium' ? 'whiteBadge' : 'badge'">ii</b-badge>
+                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
+                    <b-badge pill variant="danger" :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
                     <div class="hidden">ss</div>
                     <strong>{{ sp2 }}</strong></li>
-                <li :class="title==='Premium' ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
-                    <b-badge pill variant="danger" :class="title==='Premium' ? 'whiteBadge' : 'badge'">ii</b-badge>
+                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
+                    <b-badge pill variant="danger" :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
                     <div class="hidden">ss</div>
                     <strong>{{ sp3 }}</strong></li>
             </ul>
@@ -34,7 +34,7 @@
             <div class="hidden">y</div>
 
             <!-- Add one extra space if this is the premium card -->
-            <div class="hidden" v-if="title==='Premium'">y</div>
+            <div class="hidden" v-if="blue">y</div>
 
             <!-- CREATE THE BUTTON TO POP OPEN THE MODAL -->
             <b-button class="submit" @click="openModal(title)">GET STARTED</b-button>
@@ -67,8 +67,8 @@ export default {
         pointColor: String,
         sp1: String,
         sp2: String,
-        sp3: String
-
+        sp3: String,
+        blue: {type: Boolean, default: false}
     },
     methods:{
         openModal(modalId){

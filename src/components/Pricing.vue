@@ -37,8 +37,9 @@
 
                 <b-col class='col'>
                     <div class="container">
-                        <PriceCard id="premiumCard"
+                        <PriceCard
                             title="Premium"
+                            :blue="true"
                             forWho="Absolute Saving Gurus"
                             price="$ 200/mth"
                             sp1="$20 Cashback every month"
