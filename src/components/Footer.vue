@@ -55,7 +55,7 @@ export default {
     }
 
     .footer:hover{
-        box-shadow: 8px 8px 8px darkorange;
+        box-shadow: 2px 2px 2px darkorange;
         transform: scale(1.2);
         font-size: 90%;
     }
