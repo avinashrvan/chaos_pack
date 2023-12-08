@@ -92,7 +92,9 @@ export default {
     methods: {
         checkFormValidity() {
             // now check that the email has @ and it has characters after that
-            this.emailState = (this.email.includes('@') && this.email.slice(this.email.indexOf('@') + 1).length > 0)
+            this.emailState = ( this.email.includes('@') && 
+                                this.email.slice(this.email.indexOf('@') + 1).length > 0 &&
+                                this.email.indexOf('@') != 0)
 
             // check for password not empty
             this.passwordState = (this.password!=='')
