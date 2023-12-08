@@ -1,13 +1,11 @@
 <template>
   <div>
-    <b-button class="open" v-b-modal.modal-prevent-closing @click="setSelected(initial)">GET STARTED</b-button>
-
     <b-modal
-      id="modal-prevent-closing"
+      :id="initial"
       ref="modal"
       title="Submit Your Details"
       
-      @show="resetModal"
+      @show="resetModal(initial)"
       @hidden="resetModal"
       @ok="handleOk"
     >
@@ -102,7 +100,8 @@
 
             return this.nameState && this.emailState
         },
-        resetModal() {
+        resetModal(initial) {
+            this.setSelected(initial)
             this.name = ''
             this.nameState = null
             this.email = ''
@@ -122,7 +121,7 @@
 
             // Hide the modal manually
             this.$nextTick(() => {
-            this.$bvModal.hide('modal-prevent-closing')
+            this.$bvModal.hide(this.title)
             })
 
             // Give a confirmation message to the user
