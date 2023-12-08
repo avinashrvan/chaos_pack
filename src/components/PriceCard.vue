@@ -14,24 +14,18 @@
 
             <div class="hidden">space</div>
 
-            <!-- FOR ALL FEATURES, WE LIST IT OUT  -->
+            <!-- FOR ALL FEATURES, WE LIST IT OUT (use a for loop so the list of features is variable) -->
             <ul class="list-group list-group-flush">
-                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
-                    <b-badge pill variant="danger" :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
-                    <div class="hidden">ss</div>
-                    <strong>{{ sp1 }}</strong></li>
-                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
-                    <b-badge pill variant="danger" :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
-                    <div class="hidden">ss</div>
-                    <strong>{{ sp2 }}</strong></li>
-                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'">
-                    <b-badge pill variant="danger" :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
-                    <div class="hidden">ss</div>
-                    <strong>{{ sp3 }}</strong></li>
+                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'"
+                    v-for="(item, index) in features" :key="index">
+                        <b-badge pill :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
+                        <div class="hidden">ss</div>
+                        <strong>{{ item }}</strong>
+                </li>
             </ul>
 
-            <div class="hidden">y</div>
-            <div class="hidden">y</div>
+            <div class="hidden">space</div>
+            <div class="hidden">space</div>
 
             <!-- Add one extra space if this is the premium card -->
             <div class="hidden" v-if="blue">y</div>
@@ -65,9 +59,7 @@ export default {
         forWho: String,
         price: String,
         pointColor: String,
-        sp1: String,
-        sp2: String,
-        sp3: String,
+        features: Array,
         blue: {type: Boolean, default: false}
     },
     methods:{
