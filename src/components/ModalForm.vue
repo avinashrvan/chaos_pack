@@ -22,7 +22,7 @@
           :state="nameState"
         >
           <b-form-input
-            @keypress="checkFormValidity()"
+            @keyup="checkFormValidity()"
             id="name-input"
             v-model="name"
             :state="nameState"
@@ -39,7 +39,7 @@
           :state="emailState"
         >
           <b-form-input
-            @keypress="checkFormValidity()"
+            @keyup="checkFormValidity()"
             id="email-input"
             v-model="email"
             type="email"
