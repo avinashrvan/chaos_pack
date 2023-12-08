@@ -24,7 +24,7 @@ export default {
 
 
 <style scoped>
-    footer{
+    .footer{
         /* display: flex; */
         justify-content: space-between;
         align-items: center;
@@ -32,9 +32,19 @@ export default {
         margin-right: 30px;
         margin-bottom: 20px;
         margin-top: 20px;
-        font-size: 70%;
+        font-size: 80%;
         -webkit-text-fill-color: darkblue;
-        transition: 0.3s;
+        transition: 0.5s;
+    }
+
+    footer{
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        -webkit-text-fill-color: darkblue;
     }
 
     img{
@@ -44,10 +54,10 @@ export default {
 
     }
 
-
-    footer:hover{
-        box-shadow: 8px 8px 8px black;
+    .footer:hover{
+        box-shadow: 8px 8px 8px darkorange;
         transform: scale(1.2);
+        font-size: 90%;
     }
 
     .header{
