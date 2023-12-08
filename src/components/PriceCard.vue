@@ -10,7 +10,7 @@
 
             <div class="hidden">space</div>
 
-            <h1 :class="blue ? 'bluePosterText' : 'whitePosterText'"><strong>{{ price }}</strong></h1>
+            <h1 :class="blue ? 'bluePosterText' : 'whitePosterText'"><strong class="dolla">$</strong><strong>{{ price }}</strong></h1>
 
             <div class="hidden">space</div>
 
@@ -87,6 +87,9 @@ export default {
     font-family: Helvetica;
 }
 
+.dolla{
+    font-family: 'Calibri';
+}
 
 .badge{
     background-color: darkblue;

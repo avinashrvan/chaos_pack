@@ -14,7 +14,7 @@
                         <PriceCard 
                             title="Free"
                             forWho="Students"
-                            price="$ 0"
+                            price=" 0"
                             :features="['100GB Storage',
                                         '100GB Storage',
                                         '100GB Storage']"
@@ -27,7 +27,7 @@
                         <PriceCard 
                             title="Pro"
                             forWho="Professionals"
-                            price="$ 10/mth"
+                            price=" 10/mth"
                             :features="['100GB Storage',
                                         '100GB Storage',
                                         '100GB Storage']"
@@ -41,7 +41,7 @@
                             title="Premium"
                             :blue="true"
                             forWho="Absolute Saving Gurus"
-                            price="$ 200/mth"
+                            price=" 200/mth"
                             :features="['$20 Cashback every month', 
                                         'Unlimited storage', 
                                         'Spending Analytics']"
