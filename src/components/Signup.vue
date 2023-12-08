@@ -152,10 +152,43 @@ export default {
             this.$nextTick(() => {
             this.$bvModal.hide('modal-prevent-closing-signup')
             })
+
+            // randomly decide if the user can register :)
+            const choice = Math.floor(Math.random() * 2);
+
+            if(choice==0){
+                this.makeGoodToast()
+            } else{
+                this.makeBurntToast()
+            }
             
         },
         viewPassword(){
             this.showPassword = !this.showPassword
+        },
+        makeGoodToast(append = true) {
+            this.$bvToast.toast(`Welcome, ${this.name}`,
+            {
+            title: 'Successful registration',
+            autoHideDelay: 5000,
+            appendToast: append,
+            enableHtml: true,
+            progressBar: true,
+            solid: true,
+            variant: 'success'
+            })
+        },
+        makeBurntToast(append = true){
+            this.$bvToast.toast(`Sorry, ${this.name}, the server is down. Please try later.`,
+            {
+            title: 'Unsuccessful registration',
+            autoHideDelay: 5000,
+            appendToast: append,
+            enableHtml: true,
+            progressBar: true,
+            solid: true,
+            variant: 'danger'
+            })
         }
     }
 }

@@ -34,6 +34,7 @@ export default {
 
     methods: {
       onSubmit(event) {
+        console.log(Math.random())
         event.preventDefault()
         this.$bvToast.toast(`We will send an email to you soon: ${this.email}`,
             {

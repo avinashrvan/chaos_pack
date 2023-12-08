@@ -132,7 +132,7 @@
             this.makeToast()
             
         },
-        makeToast(append = true) {
+        makeToast(append = false) {
             this.$bvToast.toast(`Thank you, ${this.name}! ${this.email} is now registered for the ${this.selected} package`,
             {
             title: 'Thank you for registering!',

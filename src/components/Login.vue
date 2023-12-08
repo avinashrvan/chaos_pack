@@ -133,12 +133,44 @@ export default {
             this.$bvModal.hide('modal-prevent-closing-login')
             })
 
-            // give a successful login message
+            // randomly decide if they can log in :)
+            const choice = Math.floor(Math.random() * 2);
+
+            if(choice==0){
+                this.makeGoodToast()
+            } else{
+                this.makeBurntToast()
+            }
+            
 
             
         },
         viewPassword(){
             this.showPassword = !this.showPassword
+        },
+        makeGoodToast(append = true) {
+            this.$bvToast.toast(`Sorry, that account does not exist!`,
+            {
+            title: 'Unsuccessful login',
+            autoHideDelay: 5000,
+            appendToast: append,
+            enableHtml: true,
+            progressBar: true,
+            solid: true,
+            variant: 'danger'
+            })
+        },
+        makeBurntToast(append = true) {
+            this.$bvToast.toast(`Welcome back, ${this.email}`,
+            {
+            title: 'Successful login',
+            autoHideDelay: 5000,
+            appendToast: append,
+            enableHtml: true,
+            progressBar: true,
+            solid: true,
+            variant: 'success'
+            })
         }
     }
 }
