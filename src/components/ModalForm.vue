@@ -10,8 +10,10 @@
       @ok="handleOk"
     >
 
-
+      <!-- start of the form for the user to fill up -->
       <form ref="form" @submit.stop.prevent="handleSubmit">
+
+        <!-- user's name input group -->
         <b-form-group
           label="Name"
           label-for="name-input"
@@ -28,6 +30,7 @@
           ></b-form-input>
         </b-form-group>
 
+        <!-- user's email input group -->
         <b-form-group
           label="Email"
           label-for="email-input"
@@ -45,6 +48,7 @@
           ></b-form-input>
         </b-form-group>
 
+        <!-- user's required package input group -->
         <b-form-group
           label="Package"
           :state="true"
@@ -70,6 +74,7 @@
     name:"ModalForm",
     data() {
       return {
+        modalType: '',
         name: '',
         nameState: null,
         email: '',
@@ -88,10 +93,9 @@
     methods: {
         setSelected(initial){
             this.selected = initial
+            this.modalType = initial
         },
         checkFormValidity() {
-            const valid = false
-
             // first we check that the name is not empty
             this.nameState = (this.name != '')
 
@@ -121,7 +125,7 @@
 
             // Hide the modal manually
             this.$nextTick(() => {
-            this.$bvModal.hide(this.title)
+            this.$bvModal.hide(this.modalType)
             })
 
             // Give a confirmation message to the user
