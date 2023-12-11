@@ -9,14 +9,22 @@
         
             <b-row>
                 <b-col class='col'>
-                    <img src="../assets/savings.png" class="img-responsive image" width="40%"> 
+                    <img 
+                        src="../assets/savings.png" 
+                        class="img-responsive image" 
+                        width="40%"
+                        @click="openLink('https://t.ly/3hevN')"> 
                     <h5 class="title">Maximize your</h5>
                     <h3 class="bold">Savings</h3>
                     <p class="text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Morbi Quis Lectus Sed Sapien Porta Elementum</p>               
                 </b-col>
 
                 <b-col class='col'>
-                    <img src="../assets/performance.png" class="img-responsive image" width="40%">
+                    <img 
+                        src="../assets/performance.png" 
+                        class="img-responsive image" 
+                        width="40%"
+                        @click="openLink('https://t.ly/UcY8r')">
                     <h5 class="title">Track your</h5>
                     <h3 class="bold">Performance</h3>
                     <p class="text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Morbi Quis Lectus Sed Sapien Porta Elementum</p>
@@ -24,7 +32,11 @@
                 </b-col>
 
                 <b-col class='col'>
-                    <img src="../assets/winner.png" class="img-responsive image" width="40%">
+                    <img 
+                        src="../assets/winner.png" 
+                        class="img-responsive image" 
+                        width="40%"
+                        @click="openLink('https://t.ly/UnAvx')">
                     <h5 class="title">Feel like a</h5>
                     <h3 class="bold">Winner</h3>
                     <p class="text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Morbi Quis Lectus Sed Sapien Porta Elementum</p>                
@@ -45,6 +57,11 @@ export default {
     name: "BudgetTracking",
     props: {},
     components: {}, 
+    methods: {
+        openLink(url){
+            window.open(url)
+        }
+    }
 }
 
 
