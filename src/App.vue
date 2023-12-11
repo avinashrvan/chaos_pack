@@ -27,6 +27,7 @@ import BudgetTracking from './components/BudgetTracking.vue'
 import Pricing from './components/Pricing.vue'
 import Footer from './components/Footer.vue'
 
+console.log('%c Welcome to the Chaos Code website !!', 'color:lime;background:black;');
 
 export default {
   name: 'App',
