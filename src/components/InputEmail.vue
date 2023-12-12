@@ -63,7 +63,7 @@ export default {
     .submit{
         background-color: darkorange;
         -webkit-text-fill-color: white;
-        min-width: 200px;
+        min-width: 40%;
     }
 
     .inline{

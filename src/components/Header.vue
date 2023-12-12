@@ -3,19 +3,19 @@
 
         <b-container class="header" >
             <b-row align-v="center" >
-                <b-col>
+                <b-col cols="4" md="3">
                     <h6>{{ title }}</h6>
                 </b-col>
 
-                <b-col></b-col>
+                <b-col cols="4" md="1"></b-col>
 
-                <b-col>
+                <b-col cols="4" md="4">
                     <img src="../assets/logo.png" alt="">
                 </b-col>
                 
-                <b-col></b-col>
+                <b-col cols="2" md="1"></b-col>
                     
-                <b-col>
+                <b-col cols="10" md="3">
                     <b-list-group horizontal>
                         <b-list-group-item class = "b-list-group-item">
                             <Login/>
