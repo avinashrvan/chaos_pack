@@ -2,23 +2,23 @@
     <div id="main">
 
         <!-- CODE FOR ALL CARDS -->
-        <div :class="blue ? 'bluePoster poster shadow' : 'poster shadow'">
+        <div :class="blueBool ? 'bluePoster poster shadow' : 'poster shadow'" @click="swapColour()">
 
             <!-- DECIDE ON THE TEXT STYLE BASED ON THE CARD TYPE -->
-            <h5  :class="blue ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
-            <h6 :class="blue ? 'bluePosterText': null">For {{ forWho }}</h6>
+            <h5  :class="blueBool ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
+            <h6 :class="blueBool ? 'bluePosterText': null">For {{ forWho }}</h6>
 
             <div class="hidden">space</div>
 
-            <h1 :class="blue ? 'bluePosterText' : 'whitePosterText'"><strong class="dolla">$</strong><strong>{{ price }}</strong></h1>
+            <h1 :class="blueBool ? 'bluePosterText' : 'whitePosterText'"><strong class="dolla">$</strong><strong>{{ price }}</strong></h1>
 
             <div class="hidden">space</div>
 
             <!-- FOR ALL FEATURES, WE LIST IT OUT (use a for loop so the list of features is variable) -->
             <ul class="list-group list-group-flush">
-                <li :class="blue ? 'list-group-item d-flex bluePoster' : 'list-group-item d-flex'"
+                <li :class="blueBool ? 'list-group-item d-flex bluePoster transition' : 'list-group-item d-flex transition'"
                     v-for="(item, index) in features" :key="index">
-                        <b-badge pill :class="blue ? 'whiteBadge' : 'badge'">ii</b-badge>
+                        <b-badge pill :class="blueBool ? 'whiteBadge transition' : 'badge transition'">ii</b-badge>
                         <div class="hidden">ss</div>
                         <strong>{{ item }}</strong>
                 </li>
@@ -65,6 +65,14 @@ export default {
     methods:{
         openModal(modalId){
             this.$bvModal.show(modalId)
+        },
+        swapColour(){
+            this.blue = !this.blue;
+        }
+    },
+    computed: {
+        blueBool: function(){
+            return this.blue;
         }
     }
 }
@@ -115,6 +123,10 @@ export default {
     justify-content: center;
     border: 2px solid rgb(204, 204, 204);
     border-radius: 15px;
+    transition: 0.5s;
+}
+
+.transition{
     transition: 0.5s;
 }
 
