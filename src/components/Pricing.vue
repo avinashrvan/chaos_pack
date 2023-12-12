@@ -75,22 +75,21 @@ export default {
 
 <style scoped>
 .main{
-    transition: 0.5s;
     position: relative;
     overflow: hidden;
 }
 
 .main::before{
     content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  z-index: -1;
-  background: url('../assets/logo.png') 0 0 repeat;
-  transform: rotate(-30deg);
-  opacity: 10%;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: url('../assets/logo.png') 0 0 repeat;
+    transform: rotate(-30deg);
+    opacity: 10%;
 }
 
 </style>
