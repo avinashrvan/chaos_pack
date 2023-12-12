@@ -64,6 +64,7 @@ export default {
     },
     methods:{
         openModal(modalId){
+            this.isBlue = !this.isBlue
             this.$bvModal.show(modalId)
         },
         swapColour(){
