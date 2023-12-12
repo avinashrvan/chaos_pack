@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id='main' @click="reset()" @dblclick="swap()" class='main'>
         <div class="hidden">space</div>
         <div class="hidden">space</div>
         <h3 style="color:#00008B; font-family: Helvetica"><strong>Pricing</strong></h3>
@@ -66,11 +66,28 @@ export default {
     components:{
         PriceCard,
     },
-    props:{}    
+    props:{},
+    methods:{
+        swap(){
+            var rgbcolor;
+            var red = Math.floor(Math.random() * 250 + 0);
+            var green = Math.floor(Math.random() * 250 + 0);
+            var blue = Math.floor(Math.random() * 250 + 0);
+
+            rgbcolor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+ 
+            document.getElementById('main').style.backgroundColor = rgbcolor;
+        },
+        reset(){
+            document.getElementById('main').style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+    }
 }
 </script>
 
 
 <style scoped>
-
+.main{
+    transition: 0.5s;
+}
 </style>
