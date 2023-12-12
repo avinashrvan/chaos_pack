@@ -1,11 +1,17 @@
 <template>
     <div class="">
-        <b-button   
+        <b-button  
+            id="signup" 
             class="b-button open" 
             v-b-modal.modal-prevent-closing-signup pill 
-            v-b-popover.hover.top="'Make one now!'" 
-            title="Don't have an account yet?"
         >Signup</b-button>
+        <b-popover 
+            target="signup" 
+            triggers="hover" 
+            placement="top"
+            title="Don't have an account yet?"
+            :disabled = windowWidth>
+            Make one now!</b-popover>
 
 
         <b-modal
@@ -190,6 +196,10 @@ export default {
             variant: 'danger'
             })
         }
+    },
+    computed: {
+        windowWidth: function() {
+            return window.innerWidth < 500}
     }
 }
 </script>

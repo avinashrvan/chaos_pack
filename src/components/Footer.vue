@@ -54,10 +54,12 @@ export default {
 
     }
 
-    .footer:hover{
+    @media (hover: hover){
+        .footer:hover{
         box-shadow: 2px 2px 2px darkorange;
         transform: scale(1.2);
         font-size: 90%;
+        }
     }
 
     .header{
@@ -68,4 +70,4 @@ export default {
         color: darkblue;
     }
 
-</style>
+</style>yle>

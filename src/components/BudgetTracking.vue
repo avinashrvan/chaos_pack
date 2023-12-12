@@ -103,8 +103,10 @@ export default {
         transition: 0.5s;
     }
 
-    .image:hover{
+    @media (hover: hover){
+        .image:hover{
         transform: scale(1.5)
+        }
     }
 
     

@@ -130,9 +130,11 @@ export default {
     transition: 0.5s;
 }
 
-.poster:hover{
+@media (hover: hover){
+    .poster:hover{
     box-shadow: 8px 8px 8px black;
     transform: scale(1.2);
+    }
 }
 
 .bluePoster{

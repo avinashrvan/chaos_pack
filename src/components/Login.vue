@@ -1,10 +1,18 @@
 <template>
     <div class="">
         <b-button 
+            id='login'
             class="b-button open" 
             v-b-modal.modal-prevent-closing-login pill
-            v-b-popover.hover.top="'Login now!'" title="Already have an account?"
+            
         >Login</b-button>
+        <b-popover 
+            target="login" 
+            triggers="hover" 
+            placement="top"
+            title="Already have an account?"
+            :disabled = windowWidth>
+            Login now!</b-popover>
 
 
         <b-modal
@@ -172,6 +180,10 @@ export default {
             variant: 'success'
             })
         }
+    },
+    computed: {
+        windowWidth: function() {
+            return window.innerWidth < 500}
     }
 }
 </script>
