@@ -2,7 +2,7 @@
     <div id="main">
 
         <!-- CODE FOR ALL CARDS -->
-        <div :class="isBlue ? 'bluePoster poster shadow' : 'poster shadow'" @click="swapColour()">
+        <div :class="isBlue ? 'bluePoster poster shadow' : 'poster shadow'" @dblclick="swapColour()">
 
             <!-- DECIDE ON THE TEXT STYLE BASED ON THE CARD TYPE -->
             <h5  :class="isBlue ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
@@ -64,7 +64,6 @@ export default {
     },
     methods:{
         openModal(modalId){
-            this.isBlue = !this.isBlue
             this.$bvModal.show(modalId)
         },
         swapColour(){
