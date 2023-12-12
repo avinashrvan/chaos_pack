@@ -1,5 +1,5 @@
 <template>
-    <div id='main' @click="reset()" @dblclick="swap()" class='main'>
+    <div id='main' class='main'>
         <div class="hidden">space</div>
         <div class="hidden">space</div>
         <h3 style="color:#00008B; font-family: Helvetica"><strong>Pricing</strong></h3>
@@ -68,19 +68,6 @@ export default {
     },
     props:{},
     methods:{
-        swap(){
-            var rgbcolor;
-            var red = Math.floor(Math.random() * 250 + 0);
-            var green = Math.floor(Math.random() * 250 + 0);
-            var blue = Math.floor(Math.random() * 250 + 0);
-
-            rgbcolor = 'rgb(' + red + ',' + green + ',' + blue + ')';
- 
-            document.getElementById('main').style.backgroundColor = rgbcolor;
-        },
-        reset(){
-            document.getElementById('main').style.backgroundColor = 'rgb(255, 255, 255)';
-        }
     }
 }
 </script>
@@ -89,5 +76,21 @@ export default {
 <style scoped>
 .main{
     transition: 0.5s;
+    position: relative;
+    overflow: hidden;
 }
+
+.main::before{
+    content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: url('../assets/logo.png') 0 0 repeat;
+  transform: rotate(-30deg);
+  opacity: 10%;
+}
+
 </style>

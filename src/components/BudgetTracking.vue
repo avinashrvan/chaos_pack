@@ -1,5 +1,5 @@
 <template>
-<div class="budget">
+<div class="budget" id='main' @click="reset()" @dblclick="swap()">
     <h3 class="hidden">space</h3>
     <h3 style="color:#00008B; font-family: Helvetica" ><strong>Budget Tracking Made Easy</strong></h3>
 
@@ -60,6 +60,19 @@ export default {
     methods: {
         openLink(url){
             window.open(url)
+        },
+        swap(){
+            var rgbcolor;
+            var red = Math.floor(Math.random() * 250 + 0);
+            var green = Math.floor(Math.random() * 250 + 0);
+            var blue = Math.floor(Math.random() * 250 + 0);
+
+            rgbcolor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+ 
+            document.getElementById('main').style.backgroundColor = rgbcolor;
+        },
+        reset(){
+            document.getElementById('main').style.backgroundColor = '#f5f9fe';
         }
     }
 }
