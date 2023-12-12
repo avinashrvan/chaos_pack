@@ -2,23 +2,23 @@
     <div id="main">
 
         <!-- CODE FOR ALL CARDS -->
-        <div :class="blueBool ? 'bluePoster poster shadow' : 'poster shadow'" @click="swapColour()">
+        <div :class="isBlue ? 'bluePoster poster shadow' : 'poster shadow'" @click="swapColour()">
 
             <!-- DECIDE ON THE TEXT STYLE BASED ON THE CARD TYPE -->
-            <h5  :class="blueBool ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
-            <h6 :class="blueBool ? 'bluePosterText': null">For {{ forWho }}</h6>
+            <h5  :class="isBlue ? 'bluePosterText' : 'whitePosterText'"><strong>{{ title }}</strong></h5>
+            <h6 :class="isBlue ? 'bluePosterText': null">For {{ forWho }}</h6>
 
             <div class="hidden">space</div>
 
-            <h1 :class="blueBool ? 'bluePosterText' : 'whitePosterText'"><strong class="dolla">$</strong><strong>{{ price }}</strong></h1>
+            <h1 :class="isBlue ? 'bluePosterText' : 'whitePosterText'"><strong class="dolla">$</strong><strong>{{ price }}</strong></h1>
 
             <div class="hidden">space</div>
 
             <!-- FOR ALL FEATURES, WE LIST IT OUT (use a for loop so the list of features is variable) -->
             <ul class="list-group list-group-flush">
-                <li :class="blueBool ? 'list-group-item d-flex bluePoster transition' : 'list-group-item d-flex transition'"
+                <li :class="isBlue ? 'list-group-item d-flex bluePoster transition' : 'list-group-item d-flex transition'"
                     v-for="(item, index) in features" :key="index">
-                        <b-badge pill :class="blueBool ? 'whiteBadge transition' : 'badge transition'">ii</b-badge>
+                        <b-badge pill :class="isBlue ? 'whiteBadge transition' : 'badge transition'">o</b-badge>
                         <div class="hidden">ss</div>
                         <strong>{{ item }}</strong>
                 </li>
@@ -67,14 +67,14 @@ export default {
             this.$bvModal.show(modalId)
         },
         swapColour(){
-            this.blue = !this.blue;
+            this.isBlue = !this.isBlue;
         }
     },
-    computed: {
-        blueBool: function(){
-            return this.blue;
-        }
-    }
+    data() {
+		return {
+			isBlue:this.blue
+		}
+	}
 }
 </script>
 
