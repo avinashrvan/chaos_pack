@@ -118,7 +118,7 @@ export default {
 
     @media (hover: hover){
         .image:hover{
-        transform: scale(1.5)
+        transform: rotate(360deg) scale(1.5) 
         }
     }
 
